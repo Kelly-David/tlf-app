@@ -4,9 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { HorseListComponent } from '../horses/horse-list/horse-list.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full',  redirectTo: 'horses' },
-  { path: 'horses', component: HorseListComponent},
-  { path: '**', redirectTo: 'horses'}, // Fallback route (TODO page not found component)
+  { path: '', pathMatch: 'full',  redirectTo: 'horses/' },
+  { path: 'horses/', component: HorseListComponent},
+  { path: '**', redirectTo: 'horses/'}, // Fallback route (TODO page not found component)
 ];
 
 @NgModule({
