@@ -19,4 +19,8 @@ export class AppComponent implements OnInit {
     this.collapse = !this.collapse;
   }
 
+  hideSideBar() {
+    this.collapse = true;
+  }
+
 }
