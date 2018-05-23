@@ -20,6 +20,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background: #fafafa;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -289,4 +291,59 @@ a.article, a.article:hover {
     font-size: .8rem;
     text-transform: uppercase;
     color: #74b0b1;
+}
+
+/* ---------------------------------------------------
+    Horses
+----------------------------------------------------- */
+
+#horse-list .horse-collection {
+    margin: 25px 15px;
+}
+
+#horse-list .horse-collection .horse-card {
+    border-radius: 0;
+    text-align: center;
+    color: whitesmoke;
+    background: #01616d;
+}
+
+#horse-list .horse-collection .horse-card:hover {
+    -webkit-box-shadow: 0px 0px 1px #74b0b1;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0px 0px 1px #74b0b1;  /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 0px 1px #74b0b1;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+#horse-list .horse-collection .horse-card h5 {
+    letter-spacing: 1px;    
+    margin: .5rem;
+    font-weight: bold;
+}
+
+#horse-list .horse-collection .horse-card .horse-parentage { 
+    font-size: .7rem;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+#horse-list .horse-collection .horse-card .horse-parentage::before{ 
+    content: "(";
+    margin-right: 3px;
+}
+
+#horse-list .horse-collection .horse-card .horse-parentage::after{ 
+    content: ")";
+    margin-right: 5px;
+}
+
+
+#horse-list .horse-collection .horse-card .horse-info {
+    font-size: .7rem;
+    color: whitesmoke; 
+    font-weight: bold; 
+    letter-spacing: 1.5px;  
+    padding-top: .5rem; 
+    text-transform: uppercase;
 }

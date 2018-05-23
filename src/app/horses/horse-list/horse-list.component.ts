@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HorseListComponent implements OnInit {
 
+  horse = {
+    state: true
+  };
+
   constructor() { }
 
   ngOnInit() {

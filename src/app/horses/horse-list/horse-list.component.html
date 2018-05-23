@@ -1,32 +1,81 @@
 <div class="container-fluid content-title">
-    <div class="text-center">
-      <span class="content-header-subtitle">Our Horses</span>
-    </div>
+  <div class="text-center">
+    <span class="content-header-subtitle">Our Horses</span>
+  </div>
 
-    <div class="container-fluid content-nav">
-      <div class="text-center">
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Breeding</a>
-            <span>...</span>
-          </li>
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Stallions &amp; Colts</a>
-            <span>...</span>
-          </li>
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Mares &amp; Fillies</a>
-            <span>...</span>
-          </li>
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Foals</a>
-            <span>...</span>
-          </li>
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Reference</a>
-            <span>...</span>
-          </li>
-        </ul>
-      </div>
+  <div class="container-fluid content-nav">
+    <div class="text-center">
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a class="social-icon text-xs-center" target="_blank" href="#">Breeding</a>
+          <span>...</span>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-icon text-xs-center" target="_blank" href="#">Stallions &amp; Colts</a>
+          <span>...</span>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-icon text-xs-center" target="_blank" href="#">Mares &amp; Fillies</a>
+          <span>...</span>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-icon text-xs-center" target="_blank" href="#">Foals</a>
+          <span>...</span>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-icon text-xs-center" target="_blank" href="#">Reference</a>
+          <span>...</span>
+        </li>
+      </ul>
     </div>
   </div>
+</div>
+
+<div class="container-fluid" id="horse-list">
+  <div class="row horse-collection">
+
+    <div class="col-md-4">
+
+      <div class="card horse-card">
+        <div class="card-body">
+            <h5>TLF War Paint</h5>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+      <div class="card horse-card">
+        <div class="card-body">
+            <h5>TLF War Paint</h5>
+            <div class="horse-parentage">
+              (JSW Beaus War Cry x TLF Painted Affair)
+            </div>
+            <div class="horse-info">
+                2017 American Miniature Mare
+              </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+      <div class="card horse-card">
+          <div class="card-body card-img-bg" [style]="" (click)="null">
+              <a class="btn btn-social-icon pull-right">
+                <span [ngClass]="horse.state ? 'active' : 'inactive'">
+                  <i class="fa fa-circle" aria-hidden="true"></i>
+                </span>
+              </a>
+            </div>
+        <div class="card-body">
+          <h5>TLF War Paint</h5>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
