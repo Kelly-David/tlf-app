@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthService } from './core/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +11,11 @@ export class AppComponent implements OnInit {
 
   title = 'Turra Lodge Farm' as string;
   collapse = true as boolean;
+  user: Observable<any>;
 
-  constructor() { }
+  constructor(private authService: AuthService) {
+    this.user = authService.userId$;
+   }
 
   ngOnInit() {
   }

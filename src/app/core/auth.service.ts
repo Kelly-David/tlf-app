@@ -12,7 +12,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class AuthService {
 
-  public user: Observable<{}>;
+  public user: Observable<any>;
   public userIdString = new Subject<string>();
   public userId$ = this.userIdString.asObservable();
   public uString: string;
@@ -24,11 +24,12 @@ export class AuthService {
   ) {
 
     // Define the User variable
-    this.user = this.afAuth.authState.pipe(switchMap(user => {
+    this.userId$ = this.afAuth.authState.pipe(switchMap(user => {
       if (user) {
         this.userIdString.next(user.uid);
         this.uString = user.uid;
-        return this.afs.doc<{}>(`users/${user.uid}`).valueChanges();
+        console.log(user.uid);
+        return user.uid;
       } else {
         return new Observable<null>();
       }

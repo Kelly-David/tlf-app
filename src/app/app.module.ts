@@ -13,13 +13,15 @@ import { HorseService } from './horses/horse.service';
 import { FirestoreService } from './database/firestore.service';
 import { CoreModule } from './core/core.module';
 import { LoginComponent } from './login/login.component';
+import { NavComponent } from './admin/nav/nav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HorseListComponent,
-    LoginComponent
+    LoginComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
