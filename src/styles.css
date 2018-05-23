@@ -246,26 +246,24 @@ a.article, a.article:hover {
     transition: opacity .3s ease;
 }
 
+#content .footer-nav {
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: #005264;
+}
 
-/* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -300px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-    #content {
-        width: 100%;
-    }
-    #content.active {
-        width: calc(100% - 300px);
-    }
-    #top-level-quick-nav {
-        visibility: hidden;
-    }
+#content .footer-nav li {
+    margin: 2rem;
+}
+
+#content .footer-nav p a i {
+    font-size: 2rem;
+    color: #005264;
+}
+
+#content .footer-nav p {
+    letter-spacing: 10px;
+    font-size: .6rem;
 }
 
 /* ---------------------------------------------------
@@ -298,7 +296,11 @@ a.article, a.article:hover {
 ----------------------------------------------------- */
 
 #horse-list .horse-collection {
-    margin: 45px 120px;
+    margin: 45px 80px;
+}
+
+#horse-list .horse-collection-condense {
+    margin: 45px;
 }
 
 #horse-list .horse-collection .horse-card {
@@ -370,4 +372,25 @@ a.article, a.article:hover {
     position: relative;
     top: 1%;
     left: 2%;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -300px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 300px);
+    }
+    #top-level-quick-nav {
+        visibility: hidden;
+    }
 }

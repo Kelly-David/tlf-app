@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HorseService } from '../horse.service';
 import { DomSanitizer } from '@angular/platform-browser';

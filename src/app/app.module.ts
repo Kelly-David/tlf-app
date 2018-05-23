@@ -10,19 +10,22 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { HorseService } from './horses/horse.service';
 import { FirestoreService } from './database/firestore.service';
+import { CoreModule } from './core/core.module';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HorseListComponent
+    HorseListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, AngularFireDatabaseModule, // imports firebase/firestore, only needed for database features
-    AngularFireAuthModule,
+    AngularFireAuthModule, CoreModule,
   ],
   providers: [
     HorseService,
