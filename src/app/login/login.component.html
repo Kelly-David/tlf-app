@@ -1,3 +1,36 @@
-<p>
-  login works!
-</p>
+<div class="container-fluid content-title">
+  <div class="text-center">
+    <span class="content-header-subtitle">Administration</span>
+  </div>
+</div>
+
+<div class="col-sm-4 ml-auto mr-auto">
+      <ng-container *ngIf="(authService.user | async) || {} as user">
+
+          <div *ngIf="alertString" class="alert alert-warning alert-dismissible fade show authErrorAlert" role="alert">
+            {{alertString}}
+          </div>
+          <!-- login alert end -->
+  
+          <form [formGroup]="loginForm" *ngIf="!user.uid" (ngSubmit)="signin()" id="loginForm">
+  
+            <div class="form-group input-group-sm">
+              <small>Email</small>
+              <input type="email" class="form-control" formControlName="email">
+            </div>
+  
+            <div class="form-group input-group-sm">
+              <small>Password</small>
+              <input type="password" class="form-control" formControlName="password">
+            </div>
+  
+            <br>
+  
+            <button type="submit" class="btn btn-info btn-block btn-sm" [disabled]="!loginForm.valid">
+              Login
+            </button>
+  
+          </form>
+          <!-- form end -->
+      </ng-container>
+  </div>

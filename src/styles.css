@@ -163,10 +163,12 @@ ul.CTAs a {
     border-radius: 5px;
     margin-bottom: 5px;
 }
+
 a.download {
     background: #fff;
     color: #7386D5;
 }
+
 a.article, a.article:hover {
     background: #74b0b1 !important;
     color: #fff !important;
@@ -372,6 +374,22 @@ a.article, a.article:hover {
     position: relative;
     top: 1%;
     left: 2%;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+#loginForm {
+    padding-top: 30px;
+}
+
+#loginForm .btn-info:disabled {
+    background-color: #999999;
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+#loginForm .btn-info {
+    background-color: #01616d;
 }
 
 /* ---------------------------------------------------
