@@ -298,13 +298,17 @@ a.article, a.article:hover {
 ----------------------------------------------------- */
 
 #horse-list .horse-collection {
-    margin: 25px 15px;
+    margin: 45px 120px;
 }
 
 #horse-list .horse-collection .horse-card {
     border-radius: 0;
     text-align: center;
     color: whitesmoke;
+    border: none;
+}
+
+#horse-list .horse-collection .horse-card .card-body{
     background: #01616d;
 }
 
@@ -319,7 +323,7 @@ a.article, a.article:hover {
 
 #horse-list .horse-collection .horse-card h5 {
     letter-spacing: 1px;    
-    margin: .5rem;
+    margin: 1rem 0 .5rem 0;
     font-weight: bold;
 }
 
@@ -338,7 +342,6 @@ a.article, a.article:hover {
     margin-right: 5px;
 }
 
-
 #horse-list .horse-collection .horse-card .horse-info {
     font-size: .7rem;
     color: whitesmoke; 
@@ -346,4 +349,25 @@ a.article, a.article:hover {
     letter-spacing: 1.5px;  
     padding-top: .5rem; 
     text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+#horse-list .horse-collection .horse-card .card-img-top {
+    border-radius: 0;
+    border: none;
+}
+
+#horse-list .horse-collection .horse-card .card-body.card-img-bg {
+    
+    height: 300px;
+    width: auto
+}
+
+.list-thumb-border {
+    width: 96%;
+    height: 98%;
+    border: 1px solid rgba(255,255,255,.25);
+    position: relative;
+    top: 1%;
+    left: 2%;
 }

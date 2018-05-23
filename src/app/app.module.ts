@@ -6,6 +6,11 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AppComponent } from './app.component';
 import { HorseListComponent } from './horses/horse-list/horse-list.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { HorseService } from './horses/horse.service';
+import { FirestoreService } from './database/firestore.service';
+
 
 @NgModule({
   declarations: [
@@ -16,9 +21,13 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule, AngularFireDatabaseModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [
+    HorseService,
+    FirestoreService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

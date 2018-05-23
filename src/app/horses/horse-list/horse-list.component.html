@@ -34,48 +34,33 @@
 <div class="container-fluid" id="horse-list">
   <div class="row horse-collection">
 
-    <div class="col-md-4">
-
-      <div class="card horse-card">
-        <div class="card-body">
-            <h5>TLF War Paint</h5>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="col-md-4">
-
-      <div class="card horse-card">
-        <div class="card-body">
-            <h5>TLF War Paint</h5>
+    <ng-container *ngFor="let horse of horses$ | async">
+    <!-- Observable -->
+      <div class="col-md-4">
+      <!-- Horse Card -->
+        <div class="card horse-card">
+            <div class="card-body card-img-bg" [style]="getStyle(horse.profileImg)">
+                <a class="btn btn-social-icon pull-right">
+                  <span [ngClass]="horse.state ? 'active' : 'inactive'">
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                  </span>
+                </a>
+                <div class="list-thumb-border"></div>
+              </div>
+          <div class="card-body">
+            <h5>{{horse.name}}</h5>
             <div class="horse-parentage">
-              (JSW Beaus War Cry x TLF Painted Affair)
+              JSW Beaus War Cry x TLF Painted Affair
             </div>
             <div class="horse-info">
-                2017 American Miniature Mare
-              </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="col-md-4">
-
-      <div class="card horse-card">
-          <div class="card-body card-img-bg" [style]="" (click)="null">
-              <a class="btn btn-social-icon pull-right">
-                <span [ngClass]="horse.state ? 'active' : 'inactive'">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                </span>
-              </a>
+              2017 American Miniature Mare
             </div>
-        <div class="card-body">
-          <h5>TLF War Paint</h5>
+          </div>
         </div>
+
       </div>
 
-    </div>
+    </ng-container>
 
   </div>
 </div>
