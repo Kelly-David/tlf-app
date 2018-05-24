@@ -16,10 +16,9 @@
 /* ---------------------------------------------------
     Nav Style
 --------------------------------------------------- */
-
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #fafafa;
+    background: whitesmoke;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -197,6 +196,7 @@ a.article, a.article:hover {
 
 #content .content-header {
     padding: 20px 0;
+    background: whitesmoke;
 }
 #content .content-header h3{
     font-family: 'IM Fell French Canon SC', serif;  
