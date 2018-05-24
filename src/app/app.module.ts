@@ -20,6 +20,7 @@ import { SalesComponent } from './sales/sales.component';
 import { NewsComponent } from './news/news.component';
 import { ContactComponent } from './contact/contact.component';
 import { ShowingComponent } from './showing/showing.component';
+import { CarouselModule } from 'ngx-bootstrap';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { ShowingComponent } from './showing/showing.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, AngularFireDatabaseModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, CoreModule,
+    CarouselModule.forRoot(),
   ],
   providers: [
     HorseService,
