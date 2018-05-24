@@ -14,6 +14,12 @@ import { FirestoreService } from './database/firestore.service';
 import { CoreModule } from './core/core.module';
 import { LoginComponent } from './login/login.component';
 import { NavComponent } from './admin/nav/nav.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { SalesComponent } from './sales/sales.component';
+import { NewsComponent } from './news/news.component';
+import { ContactComponent } from './contact/contact.component';
+import { ShowingComponent } from './showing/showing.component';
 
 
 @NgModule({
@@ -21,7 +27,13 @@ import { NavComponent } from './admin/nav/nav.component';
     AppComponent,
     HorseListComponent,
     LoginComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    AboutComponent,
+    SalesComponent,
+    NewsComponent,
+    ContactComponent,
+    ShowingComponent
   ],
   imports: [
     BrowserModule,
