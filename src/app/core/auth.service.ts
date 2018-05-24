@@ -27,7 +27,6 @@ export class AuthService {
     this.userId$ = this.afAuth.authState.pipe(switchMap(user => {
       if (user) {
         this.userIdString.next(user.uid);
-        this.uString = user.uid;
         console.log(user.uid);
         return user.uid;
       } else {
