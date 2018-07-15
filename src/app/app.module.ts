@@ -21,6 +21,7 @@ import { NewsComponent } from './news/news.component';
 import { ContactComponent } from './contact/contact.component';
 import { ShowingComponent } from './showing/showing.component';
 import { CarouselModule } from 'ngx-bootstrap';
+import { MasonaryComponent } from './gallery/masonary/masonary.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { CarouselModule } from 'ngx-bootstrap';
     SalesComponent,
     NewsComponent,
     ContactComponent,
-    ShowingComponent
+    ShowingComponent,
+    MasonaryComponent
   ],
   imports: [
     BrowserModule,

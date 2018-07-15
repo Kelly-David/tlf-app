@@ -434,3 +434,22 @@ a.article, a.article:hover {
         visibility: hidden;
     }
 }
+
+/* ---------------------------------------------------
+    MASONARY
+----------------------------------------------------- */
+
+.masonary-card {
+    margin:0;
+    padding: 0;
+}
+
+.masonary-card .card {
+    border: none;
+    border-radius: 0;
+}
+
+.masonary-card .card-img-top {
+    border-radius: 0;
+
+}
