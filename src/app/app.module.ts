@@ -22,7 +22,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ShowingComponent } from './showing/showing.component';
 import { CarouselModule } from 'ngx-bootstrap';
 import { MasonaryComponent } from './gallery/masonary/masonary.component';
-
+import { CarouselHomeComponent } from './carousel/carousel-home/carousel-home.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,8 @@ import { MasonaryComponent } from './gallery/masonary/masonary.component';
     NewsComponent,
     ContactComponent,
     ShowingComponent,
-    MasonaryComponent
+    MasonaryComponent,
+    CarouselHomeComponent
   ],
   imports: [
     BrowserModule,

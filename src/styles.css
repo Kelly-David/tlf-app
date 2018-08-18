@@ -32,6 +32,12 @@ p {
     color: #999;
 }
 
+p.read {
+    color: black;
+    letter-spacing: 1px;
+    font-size: .8rem;
+}
+
 a, a:hover, a:focus {
     color: inherit;
     text-decoration: none;
@@ -397,6 +403,56 @@ a.article, a.article:hover {
     top: 1%;
     left: 2%;
 }
+
+/* ---------------------------------------------------
+    TEXT CARD
+------------------------------------------------------*/
+.text-card .card {
+    margin: 2rem;
+    padding: 0.5rem 2rem 0rem;
+    border-radius: 0;
+    background-color: whitesmoke;
+}
+
+.text-card .card .card-body {
+    margin: 0;
+    padding: 0;
+}
+
+.text-card .card .caption-text {
+    font-size: .7rem;
+    font-variant: small-caps;
+    letter-spacing: 4px;
+    color: #999999;
+}
+
+.text-card .card .caption-text .border-bottom {
+    position: relative;
+    top: .7rem;
+    background-color: whitesmoke
+}
+
+.text-card .card .caption-text .border-top {
+    position: relative;
+    top: -1.3rem;
+    background-color: whitesmoke
+}
+
+.text-card .card .caption-text::before {
+    content: " ";
+    margin-right: 3px;
+    background-color: whitesmoke
+}
+
+.text-card .card .caption-text::after {
+    content: " ";
+    margin-left: 3px;
+    background-color: whitesmoke
+}
+
+
+
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
