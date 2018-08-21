@@ -1,0 +1,16 @@
+<!-- <div class="container-fluid">
+  <div class="row masonary-blocks">
+    <ng-container *ngFor="let horse of horses$ | async">
+      <div class="col-md-3 image-block" [style]="getStyle(horse.profileImg)"></div>
+    </ng-container>
+  </div>
+</div> -->
+
+
+<ng-container *ngFor='let image of images'>
+
+  <ng-container *ngIf='image | async as horse'>
+    {{horse.name}}
+  </ng-container>
+
+</ng-container>

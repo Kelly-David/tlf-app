@@ -21,9 +21,8 @@ import { NewsComponent } from './news/news.component';
 import { ContactComponent } from './contact/contact.component';
 import { ShowingComponent } from './showing/showing.component';
 import { CarouselModule } from 'ngx-bootstrap';
-import { MasonaryComponent } from './gallery/masonary/masonary.component';
 import { CarouselHomeComponent } from './carousel/carousel-home/carousel-home.component';
-import { BlocksComponent } from './masonary/blocks/blocks.component';
+import { BlocksComponent } from './gallery/masonary/blocks/blocks.component';
 
 @NgModule({
   declarations: [
@@ -37,9 +36,8 @@ import { BlocksComponent } from './masonary/blocks/blocks.component';
     NewsComponent,
     ContactComponent,
     ShowingComponent,
-    MasonaryComponent,
     CarouselHomeComponent,
-    BlocksComponent
+    BlocksComponent,
   ],
   imports: [
     BrowserModule,

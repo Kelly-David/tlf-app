@@ -21,4 +21,8 @@ export class HorseService {
    get horses() {
      return this.horses$;
    }
+
+   public getHorse(name: string) {
+     return this.db.doc$(`horses/${name}`);
+   }
 }

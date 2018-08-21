@@ -338,6 +338,7 @@ a.article, a.article:hover {
     text-align: center;
     color: whitesmoke;
     border: none;
+    margin-bottom: 2rem;
 }
 
 #horse-list .horse-collection .horse-card .card-body{
@@ -450,12 +451,8 @@ a.article, a.article:hover {
     background-color: whitesmoke
 }
 
-
-
-
-
 /* ---------------------------------------------------
-    MEDIAQUERIES
+    FORMS
 ----------------------------------------------------- */
 #loginForm {
     padding-top: 30px;
