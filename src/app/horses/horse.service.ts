@@ -8,6 +8,7 @@ import { FirestoreService } from '../database/firestore.service';
 export class HorseService {
 
   private horses$: Observable<any[]>;
+  private featuredHorses$: Observable<any[]>;
 
   constructor(
     private db: FirestoreService,
@@ -16,13 +17,20 @@ export class HorseService {
     this.horses$ = this.db.col$('horses', ref => ref
                           .where('deleted', '==', false)
                           .orderBy('name'));
+
+    this.featuredHorses$ = this.db.col$('featuredhorses');
    }
 
    get horses() {
      return this.horses$;
    }
 
+   get getFeatured() {
+    return this.featuredHorses$;
+  }
+
    public getHorse(name: string) {
      return this.db.doc$(`horses/${name}`);
    }
+
 }

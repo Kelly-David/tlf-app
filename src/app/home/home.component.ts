@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HorseService } from '../horses/horse.service';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  public featuredHorses: string[] = ['F2fT4Pg1QE6TJa479WGc', 'YKAyF40yLhxTiGrRCJFd', 'jRkuZzxDV03Dk5iJtutL', 'hafNL9BfcPwU0TO3yJfe', ];
-
-  constructor() { }
+  public featuredHorses: Observable<any[]>;
+  constructor(private horseService: HorseService) { }
 
   ngOnInit() {
+    this.featuredHorses = this.horseService.getFeatured;
   }
 
 }

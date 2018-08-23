@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import * as firebase from 'firebase/app';
 import { timeout } from 'q';
-import { query } from '../../../node_modules/@angular/core/src/render3/query';
 
 type CollectionPredicate<T> = string | AngularFirestoreCollection<T>;
 type DocPredicate<T> = string | AngularFirestoreDocument<T>;
@@ -40,7 +40,9 @@ export class FirestoreService {
    * @description Firestore Document snapshot
    */
   doc$<T>(ref: DocPredicate<T>): Observable<T> {
-    return this.doc(ref).valueChanges();
+    return this.doc(ref).snapshotChanges().pipe(map(doc => {
+      return doc.payload.data() as T;
+    }));
   }
 
   /**********
