@@ -10,6 +10,7 @@ import { HorseService } from '../horses/horse.service';
 export class HomeComponent implements OnInit {
 
   public featuredHorses: Observable<any[]>;
+
   constructor(private horseService: HorseService) { }
 
   ngOnInit() {

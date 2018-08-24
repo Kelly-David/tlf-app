@@ -22,6 +22,9 @@ import { ContactComponent } from './contact/contact.component';
 import { ShowingComponent } from './showing/showing.component';
 import { CarouselModule } from 'ngx-bootstrap';
 import { CarouselHomeComponent } from './carousel/carousel-home/carousel-home.component';
+import { HorseCardComponent } from './horses/horse-card/horse-card.component';
+import { HorseMainComponent } from './horses/horse-main/horse-main.component';
+import { BlockComponent } from './gallery/masonary/block/block.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { CarouselHomeComponent } from './carousel/carousel-home/carousel-home.co
     ContactComponent,
     ShowingComponent,
     CarouselHomeComponent,
+    HorseCardComponent,
+    HorseMainComponent,
+    BlockComponent,
   ],
   imports: [
     BrowserModule,

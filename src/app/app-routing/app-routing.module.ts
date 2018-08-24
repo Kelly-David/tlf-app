@@ -9,12 +9,13 @@ import { SalesComponent } from '../sales/sales.component';
 import { ContactComponent } from '../contact/contact.component';
 import { NewsComponent } from '../news/news.component';
 import { ShowingComponent } from '../showing/showing.component';
+import { HorseMainComponent } from '../horses/horse-main/horse-main.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full',  redirectTo: 'home' },
   { path: 'home', component: HomeComponent},
   { path: 'about', component: AboutComponent},
-  { path: 'horses', component: HorseListComponent},
+  { path: 'horses', component: HorseMainComponent},
   { path: 'showing', component: ShowingComponent},
   { path: 'sales', component: SalesComponent},
   { path: 'news', component: NewsComponent},

@@ -46,3 +46,27 @@
 
   </div>
 </div>
+
+<div class="container-fluid">
+    <div class="row">
+  
+        <!-- Observable -->
+        <div class="col-sm-3 masonary-block-container" *ngFor="let horse of featuredHorses | async">
+          <app-block [id]=horse.id>
+            <!-- Horse Card -->
+          </app-block>
+        </div>
+    </div>
+  </div>
+
+<div class="container-fluid" id="horse-list">
+    <div class="row horse-collection">
+  
+        <!-- Observable -->
+        <div class="col-3" *ngFor="let horse of featuredHorses | async">
+          <app-horse-card [id]=horse.id>
+            <!-- Horse Card -->
+          </app-horse-card>
+        </div>
+    </div>
+  </div>

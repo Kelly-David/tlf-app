@@ -1,61 +1,11 @@
-<div class="container-fluid content-title">
-  <div class="text-center">
-    <span class="content-header-subtitle">Our Horses</span>
-  </div>
-
-  <div class="container-fluid content-nav">
-    <div class="text-center">
-      <ul class="list-inline">
-        <li class="list-inline-item">
-          <a class="social-icon text-xs-center" target="_blank" href="#">Breeding</a>
-          <span>...</span>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-icon text-xs-center" target="_blank" href="#">Stallions &amp; Colts</a>
-          <span>...</span>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-icon text-xs-center" target="_blank" href="#">Mares &amp; Fillies</a>
-          <span>...</span>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-icon text-xs-center" target="_blank" href="#">Foals</a>
-          <span>...</span>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-icon text-xs-center" target="_blank" href="#">Reference</a>
-          <span>...</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
 <div class="container-fluid" id="horse-list">
   <div class="row horse-collection">
 
-    <ng-container *ngFor="let horse of horses$ | async">
-    <!-- Observable -->
-      <div class="col-md-4">
-      <!-- Horse Card -->
-        <div class="card horse-card">
-            <div class="card-body card-img-bg" [style]="getStyle(horse.profileImg)">
-                <div class="list-thumb-border"></div>
-              </div>
-          <div class="card-body">
-            <h5>{{horse.name}}</h5>
-            <div class="horse-parentage">
-              JSW Beaus War Cry x TLF Painted Affair
-            </div>
-            <div class="horse-info">
-              2017 American Miniature Mare
-            </div>
-          </div>
-        </div>
-
+      <!-- Observable -->
+      <div class="col-4" *ngFor="let horse of horses$ | async">
+        <app-horse-card [id]=horse.id>
+          <!-- Horse Card -->
+        </app-horse-card>
       </div>
-
-    </ng-container>
-
   </div>
 </div>

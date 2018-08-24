@@ -26,13 +26,4 @@ export class HorseListComponent implements OnInit {
     this.horses$ = this.horseService.horses;
   }
 
-  /**
-   * Bypass Angular security to bind string to template
-   * @param imageUrl the horse.imageURL string
-   */
-  public getStyle(imageUrl) {
-    const style = `background-image: url(${imageUrl}) !important; background-size: cover`;
-    return this.sanitizer.bypassSecurityTrustStyle(style);
-  }
-
 }

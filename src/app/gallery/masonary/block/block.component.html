@@ -1,0 +1,13 @@
+<ng-container *ngIf="horse$ | async as horse">
+    <!-- Horse Card -->
+    <div class="col-sm-12 masonary-block" [style]="getStyle(horse.profileImg)">
+      <div class="masonary-block-info text-center">
+        <span>
+        </span>
+        <h6>Featured Horse</h6>
+            <h5>
+              {{horse.name}}
+            </h5>
+          </div>
+    </div>
+  </ng-container>

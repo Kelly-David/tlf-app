@@ -339,6 +339,7 @@ a.article, a.article:hover {
     color: whitesmoke;
     border: none;
     margin-bottom: 2rem;
+    box-sizing: border-box;
 }
 
 #horse-list .horse-collection .horse-card .card-body{
@@ -506,3 +507,84 @@ a.article, a.article:hover {
     border-radius: 0;
 
 }
+
+.masonary-block-container {
+    padding: 0;
+    height: 25vw;
+    width: 25%;
+    overflow: hidden;
+}
+
+.masonary-block-container .masonary-block {
+    height: 100%;
+    width: 100%;
+    transition: all .5s;
+
+}
+
+.masonary-block-container:hover .masonary-block,
+.masonary-block-container:focus .masonary-block {
+    transform: scale(1.2);
+}
+
+.masonary-block-info {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    transition: all 0.5s;
+    opacity: 0;
+  }
+
+  .masonary-block-info h5 {
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+  }
+
+.masonary-block-container:hover .masonary-block-info,
+.masonary-block-container:focus .masonary-block-info {
+  background: #00526486;
+  opacity: 1;
+}
+
+.masonary-block-info span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    outline: 1px solid rgba(245, 245, 245, 0.425);
+    outline-offset: -50px;
+    z-index: 1000;
+}
+
+.masonary-block-info  h6{
+    position: absolute;
+    top: 42%;
+    font-size: .5rem;
+}
+
+@media (max-width: 1200px) {
+    .masonary-block-info h5 {
+        font-size: .7rem;
+        font-weight: 400;
+      }
+    
+    .masonary-block-info span {
+        display: none;
+    }
+    
+    .masonary-block-info  h6{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .masonary-block-info h5 {
+        font-size: .5rem;
+        font-weight: 400;
+      }
+}
+
