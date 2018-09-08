@@ -14,6 +14,26 @@
 }
 
 /* ---------------------------------------------------
+    RESETS
+----------------------------------------------------- */
+
+.card {
+    border-radius: 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* ---------------------------------------------------
     Nav Style
 --------------------------------------------------- */
 body {
@@ -277,6 +297,84 @@ a.article, a.article:hover {
     letter-spacing: 10px;
     font-size: .6rem;
 }
+
+/* ---------------------------------------------------
+    Home - Container with BG Image
+----------------------------------------------------- */
+#bg-image-row {
+    background: url(assets/images/layout/horse-container-bg.png);
+    background-size: cover; 
+    background-position: right;
+    padding: 3rem;
+}
+
+#bg-image-row h2 {
+    font-size: 40px;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#bg-image-row p {
+    color: rgb(211, 210, 210);
+}
+
+#bg-image-row p a {
+    color: white;
+}
+
+#bg-image-row .content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#bg-image-row .content .card{
+    background-color: rgba(245, 245, 245, 0.45);
+    padding: 20px;
+    border: none;
+}
+
+#bg-image-row .content .card .card-body{
+    background-color: whitesmoke;
+}
+
+#bg-image-row .content .card .card-body .wrapper {
+    max-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#bg-image-row .content .card .card-body .wrapper h5{
+    font-size: .8rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+#bg-image-row .content .card .card-body .wrapper h4{
+    font-size: 1rem;
+    color: #005264;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+#bg-image-row .content .card .card-body .wrapper .caption-text {
+    font-size: .5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #999999;
+}
+
+#bg-image-row .content .card .card-body .wrapper p.read{
+    color: #011c22;
+    margin-top: 1rem;
+}
+
+
 
 /* ---------------------------------------------------
     HEADER
@@ -587,4 +685,6 @@ a.article, a.article:hover {
         font-weight: 400;
       }
 }
+
+
 

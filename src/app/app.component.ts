@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthService } from './core/auth.service';
+import { Router } from '../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,11 +14,18 @@ export class AppComponent implements OnInit {
   collapse = true as boolean;
   user: Observable<any>;
 
-  constructor(private authService: AuthService) {
+  constructor(
+    private authService: AuthService,
+    private router: Router) {
     this.user = authService.userId$;
    }
 
   ngOnInit() {
+    this.collapse = true;
+
+    this.router.events.subscribe(path => {
+      this.collapse = true;
+    });
   }
 
   toggleSidebar() {
