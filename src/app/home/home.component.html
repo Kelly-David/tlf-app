@@ -67,9 +67,10 @@
         <a href="/">Recent News ></a>
       </p>
   
-      <div class="row justify-content-center content">
-        <div class="col-8" *ngFor="let n of newsItems | async">
-          <div class="card">
+      <div class="row">
+        <!-- <div class="col-8"> -->
+          <app-carousel-home></app-carousel-home>
+          <!-- <div class="card">
             <div class="card-body">
               <div class="wrapper">
                 <h5>Recent News</h5>
@@ -80,8 +81,9 @@
                 <p class="read">{{n.text}}</p>
               </div>
             </div>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div> -->
       </div>
     </div>
   </div>
+  

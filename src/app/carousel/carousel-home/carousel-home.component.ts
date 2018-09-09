@@ -1,29 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import {map} from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { NewsService } from '../../news/news.service';
 
 @Component({
   selector: 'app-carousel-home',
   templateUrl: './carousel-home.component.html',
   styleUrls: ['./carousel-home.component.css']
 })
-export class CarouselHomeComponent implements OnInit {
+export class CarouselHomeComponent implements AfterViewInit {
 
-  images: Array<string>;
+  public newsItems: Observable<any[]>;
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(
+    private sanitizer: DomSanitizer,
+    private news: NewsService
+  ) { }
 
-  ngOnInit() {
-    // this._http.get('https://picsum.photos/list')
-    //     .pipe(map((images: Array<{id: number}>) => this._randomImageUrls(images)))
-    //     .subscribe(images => this.images = images);
-  }
-
-  private _randomImageUrls(images: Array<{id: number}>): Array<string> {
-    return [1, 2, 3].map(() => {
-      const randomId = images[Math.floor(Math.random() * images.length)].id;
-      return `https://picsum.photos/900/500?image=${randomId}`;
-    });
+  ngAfterViewInit() {
+    this.newsItems = this.news.news;
   }
 
   public getStyle(imageUrl) {
