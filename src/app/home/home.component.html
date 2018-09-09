@@ -57,72 +57,31 @@
   </div>
 </div>
 
-
 <div class="row" id="bg-image-row">
-  <div class="text-center">
-    <h2>
-      Welcome to
-      <strong>Turra Lodge Farm</strong>
-    </h2>
-    <p>See what's happening on the farm.
-      <a href="/">Recent News ></a>
-    </p>
-
-    <div class="row justify-content-center content">
-      <div class="col-8">
-        <div class="card">
-          <div class="card-body">
-            <div class="wrapper">
-              <h5>Recent News</h5>
-              <h4>
-                AMHA World Championship
-              </h4>
-              <span class="caption-text">September 2018 | Fort Worth, Texas</span>
-              <p class="read">Our new weanling filly,
-                <strong>Pecan Grove Boleros Alessandra</strong> is now a World Reserve Champion 
-                Weanling Mare. Alex is sired by Bolero out of the World Grand Champion Senior 
-                Mare ERL Cutty's Berry Blitz...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-8">
-        <div class="card">
-          <div class="card-body">
-            <div class="wrapper">
-              <h5>Recent News</h5>
-              <h4>
-                AMHA European Championship
-              </h4>
-              <span class="caption-text">August 2018 | De Mortel, Netherlands</span>
-              <p class="read">
-                Our yearling filly
-                <strong>TLF War Paint</strong> and senior mare
-                <strong>Exquisite Boleros Evangelista</strong> accumulated 2 European 
-                Grand Champions, 1 European Reserve Grand Champion and multiple European 
-                Champion and Reserve titles...
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-8">
+    <div class="text-center">
+      <h2>
+        Welcome to
+        <strong>Turra Lodge Farm</strong>
+      </h2>
+      <p>See what's happening on the farm.
+        <a href="/">Recent News ></a>
+      </p>
+  
+      <div class="row justify-content-center content">
+        <div class="col-8" *ngFor="let n of newsItems | async">
           <div class="card">
             <div class="card-body">
               <div class="wrapper">
                 <h5>Recent News</h5>
                 <h4>
-                  Imperial AMHA/AMHR Show
+                  {{n.title}}
                 </h4>
-                <span class="caption-text">June 2018 | Lier, Belgium</span>
-                <p class="read">Our junior stallion 
-                  <strong>TLF Charming Affair</strong> attended his first show 
-                  winning Grand Champion Stallion and Reserve Supreme Champion 
-                  as well as multiple AMHA champions and reserves in AOTE, Amateur and open...</p>
+                <span class="caption-text">{{n.date.toDate() | date:'MMMM, y'}} | {{n.location}}</span>
+                <p class="read">{{n.text}}</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
   </div>
-</div>

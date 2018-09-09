@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HorseService } from '../horses/horse.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { NewsService } from '../news/news.service';
 
 @Component({
   selector: 'app-home',
@@ -11,14 +12,18 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class HomeComponent implements OnInit {
 
   public featuredHorses: Observable<any[]>;
+  public newsItems: Observable<any[]>;
 
   constructor(
     private horseService: HorseService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private news: NewsService
     ) { }
 
   ngOnInit() {
     this.featuredHorses = this.horseService.getFeatured;
+    this.newsItems = this.news.news;
+
   }
 
   /**

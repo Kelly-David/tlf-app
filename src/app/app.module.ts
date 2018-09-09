@@ -25,6 +25,7 @@ import { CarouselHomeComponent } from './carousel/carousel-home/carousel-home.co
 import { HorseCardComponent } from './horses/horse-card/horse-card.component';
 import { HorseMainComponent } from './horses/horse-main/horse-main.component';
 import { BlockComponent } from './gallery/masonary/block/block.component';
+import { NewsItemComponent } from './news/news-item/news-item.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { BlockComponent } from './gallery/masonary/block/block.component';
     HorseCardComponent,
     HorseMainComponent,
     BlockComponent,
+    NewsItemComponent,
   ],
   imports: [
     BrowserModule,
