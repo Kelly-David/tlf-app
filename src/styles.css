@@ -322,6 +322,7 @@ a.article, a.article:hover {
 }
 
 #bg-image-row p a {
+    display: inline-block;
     color: white;
 }
 
@@ -341,7 +342,6 @@ a.article, a.article:hover {
 }
 
 #bg-image-row .content .card .card-body .wrapper {
-    max-height: 200px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -569,12 +569,12 @@ a.article, a.article:hover {
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     #sidebar {
         margin-left: -300px;
     }
     #sidebar.active {
-        margin-left: 0;
+        margin-left: 0px;
     }
     #content {
         width: 100%;
@@ -585,7 +585,7 @@ a.article, a.article:hover {
     #top-level-quick-nav {
         visibility: hidden;
     }
-}
+} */
 
 /* ---------------------------------------------------
     MASONARY
@@ -645,7 +645,7 @@ a.article, a.article:hover {
 
 .masonary-block-container:hover .masonary-block-info,
 .masonary-block-container:focus .masonary-block-info {
-  background: #00526486;
+  background-color: #00526486;
   opacity: 1;
 }
 
@@ -684,6 +684,12 @@ a.article, a.article:hover {
         font-size: .5rem;
         font-weight: 400;
       }
+}
+
+@media (max-width: 995px) {
+    .masonary-block-container {
+        height: 40vw;
+    }
 }
 
 
