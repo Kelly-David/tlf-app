@@ -1,3 +1,5 @@
-<p>
-  horse-result-list works!
+<p class="read" *ngFor="let result of results$ | async">
+  <strong>
+    {{result.text}}
+  </strong>
 </p>

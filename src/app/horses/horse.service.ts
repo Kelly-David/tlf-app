@@ -21,20 +21,24 @@ export class HorseService {
     this.featuredHorses$ = this.db.col$('featuredhorses');
    }
 
-   get horses() {
+   get horses(): Observable<any[]>  {
      return this.horses$;
    }
 
-   get getFeatured() {
+   get getFeatured(): Observable<any[]>  {
     return this.featuredHorses$;
   }
 
-   public getHorse(name: string) {
+   public getHorse(name: string): Observable<{}>  {
      return this.db.doc$(`horses/${name}`);
    }
 
-   public getHorseRoute(name: string) {
+   public getHorseRoute(name: string): Observable<{}> {
     return this.db.doc$(`horseroutes/${name}`);
+  }
+
+  public getHorseResults(id: string): Observable<any[]> {
+    return this.db.col$(`horses/${id}/results`);
   }
 
 }
