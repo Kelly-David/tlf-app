@@ -633,6 +633,7 @@ a.article, a.article:hover {
     color: whitesmoke;
     transition: all 0.5s;
     opacity: 0;
+    padding: 10%;
   }
 
   .masonary-block-info h5 {
