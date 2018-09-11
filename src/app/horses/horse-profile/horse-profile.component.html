@@ -1,0 +1,4 @@
+<div class="container-fluid content-title text-center" *ngIf="horse$ | async as horse">
+  <h3 class="content-horse-title">{{horse.name}}</h3>
+  <small>{{horse.sire}} | {{horse.dam}}</small>
+</div>

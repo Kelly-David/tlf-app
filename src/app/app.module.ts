@@ -27,6 +27,7 @@ import { HorseCardComponent } from './horses/horse-card/horse-card.component';
 import { HorseMainComponent } from './horses/horse-main/horse-main.component';
 import { BlockComponent } from './gallery/masonary/block/block.component';
 import { NewsItemComponent } from './news/news-item/news-item.component';
+import { HorseProfileComponent } from './horses/horse-profile/horse-profile.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { NewsItemComponent } from './news/news-item/news-item.component';
     HorseMainComponent,
     BlockComponent,
     NewsItemComponent,
+    HorseProfileComponent,
   ],
   imports: [
     BrowserModule,

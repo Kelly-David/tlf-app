@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { HorseListComponent } from '../horses/horse-list/horse-list.component';
 import { LoginComponent } from '../login/login.component';
 import { HomeComponent } from '../home/home.component';
 import { AboutComponent } from '../about/about.component';
@@ -10,6 +9,7 @@ import { ContactComponent } from '../contact/contact.component';
 import { NewsComponent } from '../news/news.component';
 import { ShowingComponent } from '../showing/showing.component';
 import { HorseMainComponent } from '../horses/horse-main/horse-main.component';
+import { HorseProfileComponent } from '../horses/horse-profile/horse-profile.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full',  redirectTo: 'home' },
@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'news', component: NewsComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'login', component: LoginComponent},
-  { path: '**', redirectTo: 'home'}, // Fallback route (TODO page not found component)
+  { path: 'horse/:name', component: HorseProfileComponent},
+  { path: '**', redirectTo: 'home'}, // Fallback route
 ];
 
 @NgModule({
