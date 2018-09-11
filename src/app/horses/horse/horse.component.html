@@ -1,32 +1,65 @@
-<div class="container-fluid content-title" *ngIf="horse$ | async as horse">
+<ng-container *ngIf="horse$ | async as horse">
+  <div class="container-fluid content-title">
     <div class="text-center">
-      <span class="content-header-subtitle">{{horse.name}}</span>
+      <h4 class="content-header-subtitle">{{horse.name}}</h4>
+      <small>{{horse.sire}} &times; {{horse.dam}}</small>
     </div>
-  
-    <div class="container-fluid content-nav">
-      <div class="text-center">
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Breeding</a>
-            <span>...</span>
-          </li>
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Stallions &amp; Colts</a>
-            <span>...</span>
-          </li>
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Mares &amp; Fillies</a>
-            <span>...</span>
-          </li>
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Foals</a>
-            <span>...</span>
-          </li>
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Reference</a>
-            <span>...</span>
-          </li>
-        </ul>
+  </div>
+
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="text-card">
+          <div class="card">
+
+
+            <div class="text-center">
+              <span class="caption-text">
+                <span class="border-top">
+                  &nbsp; {{horse.year}} AMERICAN MINIATURE {{horse.gender | uppercase}} &nbsp;
+                </span>
+              </span>
+            </div>
+
+            <div class="card-body">
+
+              <p class="read">
+                {{horse.text}}
+              </p>
+
+              <p class="read">
+                <strong>
+                  2018 European Reserve Grand Champion Senior Mare
+                </strong>
+              </p>
+              <p class="read">
+                <strong>
+                  2018 European Reserve Champion Senior Mare 32-34
+                </strong>
+              </p>
+              <p class="read">
+                <strong>
+                  2018 European Champion AOTE Senior Mare
+                </strong>
+              </p>
+              <p class="read">
+                  <strong>
+                    2018 European Champion YOTE Mare
+                  </strong>
+                </p>
+            </div>
+
+            <div class="text-center">
+              <span class="caption-text">
+                <span class="border-bottom">
+                  &nbsp; AMHA/AMHR &nbsp;
+                </span>
+              </span>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</ng-container>
