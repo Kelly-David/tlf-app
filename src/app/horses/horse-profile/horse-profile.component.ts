@@ -11,8 +11,8 @@ import { ActivatedRoute } from '../../../../node_modules/@angular/router';
 export class HorseProfileComponent implements OnInit {
 
   // @Input() id: string;
-  public id: string;
-  public horse$: Observable<any>;
+  public route: string;
+  public horseRoute$: Observable<any>;
 
   constructor(
     private hs: HorseService,
@@ -20,8 +20,8 @@ export class HorseProfileComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.id = this.activatedRoute.snapshot.params['id']; // Grab the id from URL params
-    this.horse$ = this.hs.getHorse(this.id);
+    this.route = this.activatedRoute.snapshot.params['name']; // Grab the id from URL params
+    this.horseRoute$ = this.hs.getHorseRoute(this.route);
   }
 
 }

@@ -1,7 +1,7 @@
 
   <ng-container *ngIf="horse$ | async as horse">
     <!-- Horse Card -->
-    <div class="card horse-card" [routerLink]="['/horse', horse.id]">
+    <div class="card horse-card" [routerLink]="['/horse', horseNameRoute(horse.name)]">
       <div class="card-body card-img-bg" [style]="getStyle(horse.profileImg)">
         <div class="list-thumb-border"></div>
       </div>

@@ -1,0 +1,32 @@
+<div class="container-fluid content-title" *ngIf="horse$ | async as horse">
+    <div class="text-center">
+      <span class="content-header-subtitle">{{horse.name}}</span>
+    </div>
+  
+    <div class="container-fluid content-nav">
+      <div class="text-center">
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a class="social-icon text-xs-center" target="_blank" href="#">Breeding</a>
+            <span>...</span>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-icon text-xs-center" target="_blank" href="#">Stallions &amp; Colts</a>
+            <span>...</span>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-icon text-xs-center" target="_blank" href="#">Mares &amp; Fillies</a>
+            <span>...</span>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-icon text-xs-center" target="_blank" href="#">Foals</a>
+            <span>...</span>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-icon text-xs-center" target="_blank" href="#">Reference</a>
+            <span>...</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

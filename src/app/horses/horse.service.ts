@@ -33,4 +33,8 @@ export class HorseService {
      return this.db.doc$(`horses/${name}`);
    }
 
+   public getHorseRoute(name: string) {
+    return this.db.doc$(`horseroutes/${name}`);
+  }
+
 }
