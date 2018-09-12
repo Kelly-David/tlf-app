@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HorseMainComponent implements OnInit {
 
+  public filter = '' as string;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  public filterHorseList(param: string) {
+    this.filter = param;
+  }
+
+
 
 }

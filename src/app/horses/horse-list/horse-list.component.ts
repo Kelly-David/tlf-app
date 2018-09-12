@@ -1,29 +1,42 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Horse } from './../../horse/horse';
+import { Component, Input, OnChanges } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HorseService } from '../horse.service';
-import { DomSanitizer } from '@angular/platform-browser';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-horse-list',
   templateUrl: './horse-list.component.html',
   styleUrls: ['./horse-list.component.css']
 })
-export class HorseListComponent implements OnInit {
+export class HorseListComponent implements OnChanges {
+
+  @Input() term: any;
 
   horse = {
     state: true
   };
-  public horses$: Observable<any[]>;
+  public horses$: Observable<Horse[]>;
 
   constructor(
-    private horseService: HorseService,
-    private sanitizer: DomSanitizer,
-
+    private horseService: HorseService
   ) { }
 
-  ngOnInit() {
+  ngOnChanges() {
+    this.getHorses();
 
+    if (this.term !== '') {
+      this.filterHorses(this.term);
+    }
+  }
+
+  private getHorses() {
     this.horses$ = this.horseService.horses;
+  }
+
+  private filterHorses(term: string) {
+    this.horses$ = this.horseService.horses.pipe(map(items =>
+      items.filter(item => item.horsetype === this.term).filter(all => all)));
   }
 
 }

@@ -6,24 +6,24 @@
     <div class="container-fluid content-nav">
       <div class="text-center">
         <ul class="list-inline">
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Breeding</a>
+          <li class="list-inline-item" (click)="filterHorseList('')">
+            <a class="social-icon text-xs-center">Breeding</a>
             <span>...</span>
           </li>
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Stallions &amp; Colts</a>
+          <li class="list-inline-item" (click)="filterHorseList('stallion')">
+            <a class="social-icon text-xs-center">Stallions &amp; Colts</a>
             <span>...</span>
           </li>
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Mares &amp; Fillies</a>
+          <li class="list-inline-item" (click)="filterHorseList('mare')">
+            <a class="social-icon text-xs-center">Mares &amp; Fillies</a>
             <span>...</span>
           </li>
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Foals</a>
+          <li class="list-inline-item" (click)="filterHorseList('foal')">
+            <a class="social-icon text-xs-center">Foals</a>
             <span>...</span>
           </li>
-          <li class="list-inline-item">
-            <a class="social-icon text-xs-center" target="_blank" href="#">Reference</a>
+          <li class="list-inline-item" (click)="filterHorseList('reference')">
+            <a class="social-icon text-xs-center">Reference</a>
             <span>...</span>
           </li>
         </ul>
@@ -31,6 +31,6 @@
     </div>
   </div>
 
-  <app-horse-list>
+  <app-horse-list [term]="filter">
     <!-- List of horse cards -->
   </app-horse-list>

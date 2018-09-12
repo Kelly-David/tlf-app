@@ -30,6 +30,7 @@ import { NewsItemComponent } from './news/news-item/news-item.component';
 import { HorseProfileComponent } from './horses/horse-profile/horse-profile.component';
 import { HorseComponent } from './horses/horse/horse.component';
 import { HorseResultListComponent } from './horses/horse-result-list/horse-result-list.component';
+import { FilterHorsePipe } from './pipes/horse.pipe';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { HorseResultListComponent } from './horses/horse-result-list/horse-resul
     HorseProfileComponent,
     HorseComponent,
     HorseResultListComponent,
+    FilterHorsePipe,
   ],
   imports: [
     BrowserModule,
