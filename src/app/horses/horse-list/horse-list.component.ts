@@ -25,13 +25,13 @@ export class HorseListComponent implements OnChanges {
   ngOnChanges() {
     this.getHorses();
 
-    if (this.term !== '') {
-      this.filterHorses(this.term);
-    }
+    // if (this.term !== '') {
+    //   this.filterHorses(this.term);
+    // }
   }
 
   private getHorses() {
-    this.horses$ = this.horseService.horses;
+    this.horses$ = this.horseService.filterHorses(this.term);
   }
 
   private filterHorses(term: string) {

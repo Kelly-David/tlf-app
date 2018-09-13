@@ -2,7 +2,7 @@ export interface Horse {
     dam: string;
     deleted: boolean;
     gender: string;
-    horsetype: string;
+    type: {};
     id: string;
     name: string;
     profileImg: String;

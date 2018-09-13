@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HorseMainComponent implements OnInit {
 
-  public filter = '' as string;
+  public filter = 'breeding' as string;
 
   constructor() { }
 

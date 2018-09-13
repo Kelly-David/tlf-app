@@ -41,4 +41,8 @@ export class HorseService {
     return this.db.col$(`horses/${id}/results`);
   }
 
+  public filterHorses(filter: string): Observable<any[]> {
+    return this.db.col$(`horses`, ref =>  ref.where(`type`, 'array-contains', filter).orderBy('name'));
+  }
+
 }
