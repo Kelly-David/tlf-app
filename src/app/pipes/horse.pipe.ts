@@ -1,16 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({
-  name: 'horse'
-})
-export class HorsePipe implements PipeTransform {
-
-  transform(value: any, args?: any): any {
-    return null;
-  }
-
-}
-
 /**
  * User Filter
  * Filters user objects by fullName (case sensitive)

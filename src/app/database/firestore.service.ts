@@ -56,4 +56,17 @@ export class FirestoreService {
     return firebase.firestore.FieldValue.serverTimestamp();
   }
 
+     /**
+    * @description Updates a firestore doc ref
+    * @param ref
+    * @param key
+    * @param data
+    */
+   update<T>(ref: DocPredicate<T>, key: string, data: any) {
+    return this.doc(ref + `/${key}`).update({
+      ...data,
+      updatedAt: this.timeStamp
+    });
+  }
+
 }

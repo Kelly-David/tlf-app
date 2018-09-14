@@ -1,7 +1,7 @@
 <div class="container-fluid content-title">
   <div class="text-center">
     <div class="content-header-subtitle">
-          Home
+      Home
     </div>
   </div>
 </div>
@@ -20,14 +20,35 @@
 
     <div class="card-body">
 
-      <p class="read">
-        Turra Lodge Farm is a family owned and operated American miniature horse breeding program located in the south east of Ireland.
+      <p class="read" *ngFor="let content of content$ | async">
+        <ng-container *ngIf="!edit">
+          {{content.text}}
+        </ng-container>
+        <ng-container *ngIf="authService.userId$ | async">
+
+          <ng-container *ngIf="edit">
+            <form (ngSubmit)="update(content)">
+              <div class="form-group">
+                <textarea class="form-control" rows="5" id="content.id" name="content.id" [(ngModel)]="content.text"></textarea>
+                <button type="submit" class="btn btn-success btn-block">
+                  Update
+                </button>
+              </div>
+            </form>
+          </ng-container>
+
+        </ng-container>
+      </p>
+      <div class="text-center">
+        <button class="btn" *ngIf="(authService.userId$ | async) && edit" (click)="edit = !edit">Close</button>
+        <button class="btn" *ngIf="(authService.userId$ | async) && !edit" (click)="edit = !edit">Edit</button>
+      </div>
+      <!-- Turra Lodge Farm is a family owned and operated American miniature horse breeding program located in the south east of Ireland.
         The Kelly Family have owned and bred miniature horses since 2005. The farm is home to a small group of AMHA registered
         miniature horses, some of which are also registered with the AMHR or the BMHS. Each Spring brings the arrival of
         new foals. Our hope is that these individuals will become successful halter horses before contributing to our breeding
-        program. Since the farm's inception we have enjoyed presenting our horses in Ireland, the United Kingdom and Europe.
-      </p>
-      <p class="read">
+        program. Since the farm's inception we have enjoyed presenting our horses in Ireland, the United Kingdom and Europe. -->
+      <!-- <p class="read">
         Our aim at TLF is to breed beautiful American Miniature Horses with the most perfect conformation, attitude and athleticism
         for the showring, and we could not have found a more pleasurable pastime. We have carefully established a small herd
         of American Miniature Horses possessing extreme type, refinement and movement. All of our miniature horses are registered
@@ -35,7 +56,7 @@
         into our breeding program some ​of the finest lineage in the miniature horse industry. We invite you to browse through
         our website and please feel free to contact us if you would like further information on any of our American miniature
         horses.
-      </p>
+      </p> -->
     </div>
 
     <div class="text-center">
@@ -60,19 +81,19 @@
 </div>
 
 <div class="row" id="bg-image-row">
-    <div class="text-center">
-      <h2>
-        Welcome to
-        <strong>Turra Lodge Farm</strong>
-      </h2>
-      <p>See what's happening on the farm.
-        <a href="/">Recent News ></a>
-      </p>
-  
-      <div class="row">
-        <!-- <div class="col-8"> -->
-          <app-carousel-home></app-carousel-home>
-          <!-- <div class="card">
+  <div class="text-center">
+    <h2>
+      Welcome to
+      <strong>Turra Lodge Farm</strong>
+    </h2>
+    <p>See what's happening on the farm.
+      <a href="/">Recent News ></a>
+    </p>
+
+    <div class="row">
+      <!-- <div class="col-8"> -->
+      <app-carousel-home></app-carousel-home>
+      <!-- <div class="card">
             <div class="card-body">
               <div class="wrapper">
                 <h5>Recent News</h5>
@@ -84,8 +105,7 @@
               </div>
             </div>
           </div> -->
-        <!-- </div> -->
-      </div>
+      <!-- </div> -->
     </div>
   </div>
-  
+</div>
