@@ -29,4 +29,14 @@ export class BlockComponent implements OnChanges {
     return this.sanitizer.bypassSecurityTrustStyle(style);
   }
 
+  /**
+ * Transforms a horse display name to router link format
+ * @param name horse name to transform
+ */
+public horseNameRoute(name: string): string {
+  let routeString = '';
+  routeString = name.split(' ').join('-').toLowerCase();
+  return routeString;
+}
+
 }
