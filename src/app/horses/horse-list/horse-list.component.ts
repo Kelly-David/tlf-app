@@ -16,6 +16,11 @@ export class HorseListComponent implements OnChanges {
   horse = {
     state: true
   };
+
+  queryRef = {
+    foal: 'year'
+  };
+
   public horses$: Observable<Horse[]>;
 
   constructor(
@@ -23,20 +28,20 @@ export class HorseListComponent implements OnChanges {
   ) { }
 
   ngOnChanges() {
-    this.getHorses();
-
-    // if (this.term !== '') {
-    //   this.filterHorses(this.term);
-    // }
+    if (this.term === 'foal') {
+      this.horses$ = this.horseService.customHorseSort(this.term, this.queryRef[this.term]);
+    } else {
+      this.getHorses();
+    }
   }
 
   private getHorses() {
     this.horses$ = this.horseService.filterHorses(this.term);
   }
 
-  private filterHorses(term: string) {
+  private filterFoals(term: string) {
     this.horses$ = this.horseService.horses.pipe(map(items =>
-      items.filter(item => item.horsetype === this.term).filter(all => all)));
+      items.filter(item => item.year).filter(all => all)));
   }
 
 }

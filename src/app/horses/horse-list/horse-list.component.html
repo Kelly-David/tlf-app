@@ -1,5 +1,11 @@
 <div class="container-fluid" id="horse-list">
-  <div class="row horse-collection">
+  <div class="row horse-collection ">
+
+    <p class="text-center" *ngIf="(horses$ | async)?.length == 0">
+
+      No {{term}}s to display at this time...
+
+    </p>
 
       <!-- Observable -->
       <div class="col-4" *ngFor="let horse of horses$ | async">

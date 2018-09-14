@@ -42,7 +42,11 @@ export class HorseService {
   }
 
   public filterHorses(filter: string): Observable<any[]> {
-    return this.db.col$(`horses`, ref =>  ref.where(`type`, 'array-contains', filter).orderBy('name'));
+    return this.db.col$(`horses`, ref => ref.where(`type`, 'array-contains', filter).orderBy('name'));
+  }
+
+  public customHorseSort(term: string, sort: string): Observable<any[]> {
+    return this.db.col$(`horses`, ref => ref.where('type', 'array-contains', term).orderBy('year', 'desc'));
   }
 
 }
