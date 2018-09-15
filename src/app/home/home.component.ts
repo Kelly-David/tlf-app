@@ -16,7 +16,8 @@ export class HomeComponent implements OnInit {
   public featuredHorses: Observable<any[]>;
   public newsItems: Observable<any[]>;
   public content$: Observable<any[]>;
-  public edit = false as boolean;
+  public editHomeText = false as boolean;
+  public editFeaturedHorses = false as boolean;
 
   constructor(
     private horseService: HorseService,
