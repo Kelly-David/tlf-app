@@ -445,12 +445,12 @@ a.article, a.article:hover {
 }
 
 #horse-list .horse-collection .horse-card:hover {
-    -webkit-box-shadow: 0px 0px 1px #74b0b1;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    0px 0px 1px #74b0b1;  /* Firefox 3.5 - 3.6 */
-    box-shadow: 0px 0px 1px #74b0b1;
+    -webkit-box-shadow: 0px 0px 12px #395757d7;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0px 0px 12px #395757d7;  /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 0px 12px #395757d7;
     cursor: pointer;
     position: relative;
-    transition: 0.3s ease;
+    transition: 0.3s ease-in-out;
 }
 
 #horse-list .horse-collection .horse-card h5 {
@@ -708,4 +708,85 @@ a.article, a.article:hover {
 .btn-block {
     margin-top: .3rem;
     margin-bottom: 1.5rem;
+}
+
+/* ---------------------------------------------------
+    News Component
+----------------------------------------------------- */
+#news-row {
+    padding: 3rem;
+}
+
+#news-row h2 {
+    font-size: 40px;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+    text-align: center;
+    color: black;
+}
+
+#news-row p {
+    color: #999;
+}
+
+#news-row p a {
+    display: inline-block;
+    color: #999;
+}
+
+#news-row .content {
+}
+
+#news-row .content .card {
+    background-color: #01616d;
+    padding: 20px;
+    border: none;
+    margin-bottom: 3rem;
+}
+
+#news-row .content .card:hover {
+    -webkit-box-shadow: 0px 0px 12px #395757d7;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0px 0px 12px #395757d7; /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 0px 12px #395757d7;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+#news-row .content .card .card-body{
+    background-color: whitesmoke;
+}
+
+#news-row .content .card .card-body .wrapper {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#news-row .content .card .card-body .wrapper h5{
+    font-size: .8rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+#news-row .content .card .card-body .wrapper h4{
+    font-size: 1rem;
+    color: #005264;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+#news-row .content .card .card-body .wrapper .caption-text {
+    font-size: .5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #999999;
+}
+
+#news-row .content .card .card-body .wrapper p.read{
+    color: #011c22;
+    margin-top: 1rem;
 }

@@ -31,6 +31,7 @@ import { HorseProfileComponent } from './horses/horse-profile/horse-profile.comp
 import { HorseComponent } from './horses/horse/horse.component';
 import { HorseResultListComponent } from './horses/horse-result-list/horse-result-list.component';
 import { FilterHorsePipe } from './pipes/horse.pipe';
+import { NewsListComponent } from './news/news-list/news-list.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { FilterHorsePipe } from './pipes/horse.pipe';
     HorseComponent,
     HorseResultListComponent,
     FilterHorsePipe,
+    NewsListComponent,
   ],
   imports: [
     BrowserModule,

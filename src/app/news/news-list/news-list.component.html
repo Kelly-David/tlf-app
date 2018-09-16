@@ -1,0 +1,18 @@
+<div class="text-center" id="news-row">
+  <div class="row justify-content-center content">
+    <div class="col-8" *ngFor="let n of news$ | async">
+      <div class="card">
+        <div class="card-body">
+          <div class="wrapper">
+            <h5>Recent News</h5>
+            <h4>
+              {{n.title}}
+            </h4>
+            <span class="caption-text">{{n.date.toDate() | date:'MMMM, y'}} | {{n.location}}</span>
+            <p class="read">{{n.text}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

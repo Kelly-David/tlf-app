@@ -17,7 +17,13 @@ export class HomeComponent implements OnInit {
   public newsItems: Observable<any[]>;
   public content$: Observable<any[]>;
   public editHomeText = false as boolean;
+  public addText = false as boolean;
   public editFeaturedHorses = false as boolean;
+
+  public newContent = {
+    text: '',
+    id: 'xxx'
+  };
 
   constructor(
     private horseService: HorseService,
@@ -46,6 +52,10 @@ export class HomeComponent implements OnInit {
   public update(content: any) {
     console.log(content.text);
     this.homeService.updateHomeText(content.id, content);
+  }
+
+  public save() {
+    console.log(this.newContent.text);
   }
 
 }

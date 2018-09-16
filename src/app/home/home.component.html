@@ -24,9 +24,8 @@
         <ng-container *ngIf="!editHomeText">
           {{content.text}}
         </ng-container>
-        <ng-container *ngIf="authService.userId$ | async">
-
           <ng-container *ngIf="editHomeText">
+            <!-- Edit -->
             <form (ngSubmit)="update(content)">
               <div class="form-group">
                 <textarea class="form-control" rows="5" id="content.id" name="content.id" [(ngModel)]="content.text"></textarea>
@@ -36,13 +35,36 @@
               </div>
             </form>
           </ng-container>
-
-        </ng-container>
       </p>
+      <ng-container *ngIf="authService.userId$ | async">
+          <!-- Authenticated View -->
+
       <div class="text-center">
-        <button type="button" class="btn btn-sm btn-info" *ngIf="(authService.userId$ | async) && editHomeText" (click)="editHomeText = !editHomeText">Close</button>
-        <button type="button" class="btn btn-sm btn-info" *ngIf="(authService.userId$ | async) && !editHomeText" (click)="editHomeText = !editHomeText">Edit</button>
+        <div class="btn-group btn-group-sm" role="group" aria-label="Controls">
+            <button type="button" class="btn btn-sm btn-info" *ngIf="(authService.userId$ | async) && editHomeText" (click)="editHomeText = !editHomeText">Close</button>
+            <button type="button" class="btn btn-sm btn-info" *ngIf="(authService.userId$ | async) && editHomeText" (click)="addText = !addText">Add</button>
+            <button type="button" class="btn btn-sm btn-info" *ngIf="(authService.userId$ | async) && !editHomeText" (click)="editHomeText = !editHomeText">Edit</button>
+        </div>
       </div>
+
+      <ng-container *ngIf="addText">
+        <p [(ngModel)]="newContent.text"></p>
+
+          <form (ngSubmit)="save()">
+              <div class="form-group">
+                <textarea class="form-control" rows="5" id="newContent.id" name="newContent.id" [(ngModel)]="newContent.text" ngDefaultControl></textarea>
+                <button type="submit" class="btn btn-outline-info btn-sm btn-block">
+                  Update
+                </button>
+              </div>
+            </form>
+
+      </ng-container>
+
+
+
+    </ng-container>
+
       <!-- Turra Lodge Farm is a family owned and operated American miniature horse breeding program located in the south east of Ireland.
         The Kelly Family have owned and bred miniature horses since 2005. The farm is home to a small group of AMHA registered
         miniature horses, some of which are also registered with the AMHR or the BMHS. Each Spring brings the arrival of

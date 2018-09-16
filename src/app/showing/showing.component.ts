@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowingComponent implements OnInit {
 
+  public filter = 'show' as string;
+
   constructor() { }
 
   ngOnInit() {
