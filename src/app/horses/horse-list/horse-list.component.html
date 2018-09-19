@@ -8,7 +8,7 @@
     </p>
 
       <!-- Observable -->
-      <div class="col-4" *ngFor="let horse of horses$ | async">
+      <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let horse of horses$ | async">
         <app-horse-card [id]=horse.id>
           <!-- Horse Card -->
         </app-horse-card>
