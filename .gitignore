@@ -40,3 +40,4 @@ Thumbs.db
 
 # Image files for development
 /assets/images
+src/environments/environment.ts
