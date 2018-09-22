@@ -298,6 +298,10 @@ a.article, a.article:hover {
     font-size: .6rem;
 }
 
+#content h4.page-title {
+    margin: 2rem;
+}
+
 /* ---------------------------------------------------
     Home - Container with BG Image
 ----------------------------------------------------- */

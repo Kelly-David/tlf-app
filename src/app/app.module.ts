@@ -33,6 +33,8 @@ import { HorseResultListComponent } from './horses/horse-result-list/horse-resul
 import { FilterHorsePipe } from './pipes/horse.pipe';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { EmailFormComponent } from './contact/email-form/email-form.component';
+import { AgmCoreModule } from '@agm/core';
+import { MapComponent } from './contact/map/map.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,7 @@ import { EmailFormComponent } from './contact/email-form/email-form.component';
     FilterHorsePipe,
     NewsListComponent,
     EmailFormComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,6 +71,9 @@ import { EmailFormComponent } from './contact/email-form/email-form.component';
     AngularFirestoreModule, AngularFireDatabaseModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, CoreModule,
     CarouselModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: environment.mapsAPI
+    }),
   ],
   providers: [
     HorseService,
