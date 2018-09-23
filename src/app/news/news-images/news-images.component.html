@@ -1,3 +1,9 @@
-<p>
-  news-images works!
-</p>
+<div class="row justify-content-center">
+  <div class="col-md-12 col-lg-4" *ngFor="let image of images$ | async">
+    <div class="thumbnail">
+      <img [src]="getImageURL(image.url)" [alt]="image.alt" class="img-thumbnail">
+      <figcaption>{{image.alt}}</figcaption>
+    </div>
+  </div>
+</div>
+

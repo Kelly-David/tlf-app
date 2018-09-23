@@ -11,7 +11,7 @@
             <span class="caption-text">{{n.date.toDate() | date:'MMMM, y'}} | {{n.location}}</span>
             <p class="read">{{n.text}}</p>
             <!-- News images -->
-            <app-news-images></app-news-images>
+            <app-news-images [newsItemId]="n.id"></app-news-images>
           </div>
         </div>
       </div>

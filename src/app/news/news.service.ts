@@ -20,4 +20,8 @@ export class NewsService {
   get news() {
     return this.news$;
   }
+
+  public getNewsItemImages(id: string): Observable<any[]> {
+    return this.db.col$(`news/${id}/photos`, ref => ref.where('deleted', '==', false).orderBy('order'));
+  }
 }

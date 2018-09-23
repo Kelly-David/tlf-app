@@ -803,3 +803,8 @@ a.article, a.article:hover {
     color: #011c22;
     margin-top: 1rem;
 }
+
+#news-row .thumbnail figcaption {
+    font-size: 10px;
+    text-transform: uppercase
+}
