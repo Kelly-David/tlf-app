@@ -243,6 +243,11 @@ a.article, a.article:hover {
     color: whitesmoke;
     text-transform: uppercase;
 }
+
+#content .content-body{
+    margin-top: 30px;
+}
+
 #content .content-nav {
     border-top: #74b0b1 solid 1px;
     border-bottom: #74b0b1 solid 1px;

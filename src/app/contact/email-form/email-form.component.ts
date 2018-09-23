@@ -23,8 +23,8 @@ export class EmailFormComponent implements OnInit {
 
   ngOnInit() {
     this.emailForm = this.fb.group({
-      'email': ['', [Validators.required]],
-      'message': ['', [Validators.required]]
+      'email': ['', [Validators.email, Validators.required]],
+      'message': ['', [Validators.min(3), Validators.required]]
     });
   }
 

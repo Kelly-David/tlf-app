@@ -3,3 +3,43 @@
     <span class="content-header-subtitle">Sales</span>
   </div>
 </div>
+
+<div class="container-fluid content-body">
+    <div class="row">
+        <div class="col-xl-12">
+          <p class="text-center" *ngIf="(saleHorses$ | async)?.length == 0">
+            No sale horses to display at this time.
+          </p>
+        </div>
+      </div>
+      
+      <div *ngIf="(saleHorses$ | async)?.length > 0" class="container-fluid" id="horse-list">
+        <div class="row horse-collection ">
+          <!-- Observable -->
+          <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let horse of saleHorses$ | async">
+            <app-horse-card [id]=horse.id>
+              <!-- Horse Card -->
+            </app-horse-card>
+          </div>
+        </div>
+      </div>
+            
+      <div class="row">
+        <div class="col-lg-12">
+          <p class="text-center" *ngIf="(soldHorses$ | async)?.length == 0">
+            No sold horses to display at this time.
+          </p>
+        </div>
+      </div>
+      
+      <div class="container-fluid" id="horse-list">
+        <div class="row horse-collection ">
+          <!-- Observable -->
+          <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let horse of soldHorses$ | async">
+            <app-horse-card [id]=horse.id>
+              <!-- Horse Card -->
+            </app-horse-card>
+          </div>
+        </div>
+      </div>
+</div>
