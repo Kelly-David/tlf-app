@@ -36,6 +36,7 @@ import { EmailFormComponent } from './contact/email-form/email-form.component';
 import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './contact/map/map.component';
 import { NewsImagesComponent } from './news/news-images/news-images.component';
+import { HorseImagesComponent } from './horses/horse-images/horse-images.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { NewsImagesComponent } from './news/news-images/news-images.component';
     EmailFormComponent,
     MapComponent,
     NewsImagesComponent,
+    HorseImagesComponent,
   ],
   imports: [
     BrowserModule,
