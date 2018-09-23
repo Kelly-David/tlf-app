@@ -1,3 +1,5 @@
-<p>
-  horse-images works!
-</p>
+<div class="row">
+  <div class="col-md-3" *ngFor="let image of horseImages$ | async">
+    Image
+  </div>
+</div>

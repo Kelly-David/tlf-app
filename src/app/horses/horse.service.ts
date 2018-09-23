@@ -54,4 +54,8 @@ export class HorseService {
     return this.db.col$(`horses`, ref => ref.where('deleted', '==', false).orderBy('name', 'desc'));
   }
 
+  public horseImages(id: string): Observable<any[]> {
+    return this.db.col$(`horses/${id}/images`);
+  }
+
 }
