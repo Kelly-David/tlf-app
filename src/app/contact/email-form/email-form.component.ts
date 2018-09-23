@@ -1,5 +1,6 @@
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from '../contact.service';
 
 @Component({
   selector: 'app-email-form',
@@ -11,24 +12,32 @@ export class EmailFormComponent implements OnInit {
   emailForm: FormGroup;
   public enquiry = {
     email: '',
-    message: '',
-    check: false
-  };
+    message: ''
+    };
+  public formSent = false as boolean;
 
   constructor(
-    public fb: FormBuilder
+    public fb: FormBuilder,
+    private cs: ContactService
   ) { }
 
   ngOnInit() {
     this.emailForm = this.fb.group({
       'email': ['', [Validators.required]],
-      'message': ['', [Validators.required]],
-      'check': ['', []]
+      'message': ['', [Validators.required]]
     });
   }
 
-  public save(enquiry: any) {
-    console.log(enquiry);
+  get email() { return this.emailForm.get('email'); }
+  get message() { return this.emailForm.get('message'); }
+
+  public save() {
+    return this.cs.saveMail({
+      email: this.email.value,
+      message: this.message.value
+    }).then( () => {
+      this.formSent = true;
+    });
   }
 
 }

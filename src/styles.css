@@ -302,6 +302,10 @@ a.article, a.article:hover {
     margin: 2rem;
 }
 
+#content .content-block {
+    margin-top: 3em;
+}
+
 /* ---------------------------------------------------
     Home - Container with BG Image
 ----------------------------------------------------- */

@@ -69,4 +69,22 @@ export class FirestoreService {
     });
   }
 
+  /**
+    * @description Custom set method - add a single doc to a specified collection
+    * @param ref
+    * @param data
+    */
+   set<T>(ref: DocPredicate<T>, data: any, id?: string) {
+    const timeStamp = this.timeStamp;
+    // If we pass an id, don't create one (alarms only)
+    const uniqueRef = id ? id : this.afs.createId();
+    return this.doc(ref + `/${uniqueRef}`).set({
+      ...data,
+      id: uniqueRef,
+      updatedAt: timeStamp,
+      createdAt: timeStamp,
+      deleted: false
+    });
+  }
+
 }
