@@ -35,6 +35,7 @@ import { NewsListComponent } from './news/news-list/news-list.component';
 import { EmailFormComponent } from './contact/email-form/email-form.component';
 import { AgmCoreModule } from '@agm/core';
 import { MapComponent } from './contact/map/map.component';
+import { NewsImagesComponent } from './news/news-images/news-images.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { MapComponent } from './contact/map/map.component';
     NewsListComponent,
     EmailFormComponent,
     MapComponent,
+    NewsImagesComponent,
   ],
   imports: [
     BrowserModule,
