@@ -55,7 +55,7 @@ export class HorseService {
   }
 
   public horseImages(id: string): Observable<any[]> {
-    return this.db.col$(`horses/${id}/images`);
+    return this.db.col$(`horses/${id}/photos`);
   }
 
 }

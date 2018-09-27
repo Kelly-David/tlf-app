@@ -23,4 +23,9 @@ export class HorseImagesComponent implements OnChanges {
     this.horseImages$ = this.hs.horseImages(this.horseId);
   }
 
+  public getImg(imageUrl) {
+    const url = 'https://' + imageUrl;
+    return this.sanitizer.bypassSecurityTrustUrl(imageUrl);
+  }
+
 }

@@ -1,5 +1,14 @@
-<div class="row">
-  <div class="col-md-3" *ngFor="let image of horseImages$ | async">
-    Image
-  </div>
+<!-- Masonry grid Container -->
+<div class="container-fluid">
+<ng-masonry-grid
+[masonryOptions]="{ transitionDuration: '0.8s' }" 
+[useAnimation]="true"
+[useImagesLoaded]="true"
+[scrollAnimationOptions]="{ animationEffect: 'effect-4', minDuration : 0.4, maxDuration : 0.7 }">
+<!-- Masonry Grid Item -->
+<ng-masonry-grid-item class="masonry-item"  *ngFor="let image of horseImages$ | async"> 
+<!-- Grid Content  -->
+<img [src]="getImg(image.url)" class="img-fluid" alt="Responsive image">
+</ng-masonry-grid-item>
+</ng-masonry-grid>
 </div>

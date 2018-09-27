@@ -7,5 +7,6 @@ export const environment = {
     storageBucket: 'project-64c2c.appspot.com',
     projectId: 'project-64c2c', // <--- make sure project ID is here
     messagingSenderId: '452209644822'
-  }
+  },
+  mapsAPI: 'AIzaSyDCdGfPgNS1mui1GImDzyWIc41AckWiOcA'
 };
