@@ -1,6 +1,13 @@
 <ng-container *ngIf="horse$ | async as horse">
   <!-- Horse Card -->
-  <div class="progeny-block-dummy"></div>
-  <div class="progeny-block" [style]="getStyle(horse.profileImg)">
+  <div class="square-block-dummy"></div>
+  <div class="square-block progeny" [style]="getStyle(horse.profileImg)">
+    <div class="square-block-overlay progeny">
+      <div class="square-block-info ">
+        <h6>
+            {{horse.name}}
+        </h6>
+      </div>
+    </div>
   </div>
 </ng-container>

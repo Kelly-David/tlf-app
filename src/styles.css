@@ -311,6 +311,13 @@ a.article, a.article:hover {
     margin-top: 3em;
 }
 
+#content h5.section-title {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+
+}
+
 /* ---------------------------------------------------
     Home - Container with BG Image
 ----------------------------------------------------- */
@@ -810,17 +817,56 @@ a.article, a.article:hover {
 }
 
 /* --------------------------------------------
-    Progeny Block
+    Square Blocks Collection
 --------------------------------------------- */ 
 
-#progeny .progeny-block-dummy {
+.square-block-dummy {
     margin-top: 100%;
 }
 
-#progeny .progeny-block {
+.square-block {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    cursor: pointer;
+}
+
+.square-block-overlay {
+    height: 100%;
+    width: 100%
+}
+
+.square-block-info {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    transition: all 0.5s;
+    padding: 10%;
+  }
+
+.square-block-info  h6{
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+}
+
+/* Progeny */
+
+.progeny {
+    background-color: #00526486;
+    opacity: 1;
+}
+
+.progeny:hover { 
+    background-color: #00526400;
+}
+
+.progeny:hover h6 {
+    opacity: 0;
 }

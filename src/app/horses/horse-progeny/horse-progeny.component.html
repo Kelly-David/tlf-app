@@ -1,7 +1,18 @@
-<div class="container-fluid" id="progeny">
-  <div class="row">
-    <div class="col-4" *ngFor="let foal of foals$ | async">
-        <app-horse-progeny-block [id]="foal.id"></app-horse-progeny-block>
-    </div> 
+<ng-container *ngIf="(foals$ | async)?.length > 0">
+  <div class="line"></div>
+  <h5 class="section-title">Offspring</h5>
+</ng-container>
+
+<div class="container-fluid content-body">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <div class="container-fluid" id="progeny">
+        <div class="row">
+          <div class="col-4" *ngFor="let foal of foals$ | async">
+            <app-horse-progeny-block [id]="foal.id"></app-horse-progeny-block>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

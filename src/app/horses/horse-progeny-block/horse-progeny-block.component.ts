@@ -27,7 +27,7 @@ export class HorseProgenyBlockComponent implements OnChanges {
    * @param imageUrl the horse.imageURL string
    */
   public getStyle(imageUrl) {
-    const style = `background-image: url(${imageUrl}) !important; background-size: cover; background-position: center`;
+    const style = `background-image: url(${imageUrl}) !important; background-size: cover; background-position: center;`;
     return this.sanitizer.bypassSecurityTrustStyle(style);
   }
 

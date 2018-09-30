@@ -1,6 +1,6 @@
 <ng-container *ngIf="horse$ | async as horse">
 
-<!-- <div class="container-fluid text-center">
+  <!-- <div class="container-fluid text-center">
   <div class="row justify-content-center">
     <div class="col-12">
       <div class="horse-image-header" [style]="getImgStyle(horse.profileImg)" >
@@ -64,14 +64,6 @@
     <app-horse-images [horseId]="horse.id"></app-horse-images>
   </div>
 
-  <div class="container-fluid content-body">
-    <div class="row justify-content-center">
-      <div class="col-8">
-        <app-horse-progeny [id]=horse.id></app-horse-progeny>
-      </div>
-    </div>
-  </div>
-
-
+  <app-horse-progeny [id]="horse.id"></app-horse-progeny>
 
 </ng-container>
