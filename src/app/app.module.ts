@@ -38,6 +38,7 @@ import { MapComponent } from './contact/map/map.component';
 import { NewsImagesComponent } from './news/news-images/news-images.component';
 import { HorseImagesComponent } from './horses/horse-images/horse-images.component';
 import { NgMasonryGridModule } from 'ng-masonry-grid';
+import { HorseProgenyComponent } from './horses/horse-progeny/horse-progeny.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { NgMasonryGridModule } from 'ng-masonry-grid';
     MapComponent,
     NewsImagesComponent,
     HorseImagesComponent,
+    HorseProgenyComponent,
   ],
   imports: [
     BrowserModule,
