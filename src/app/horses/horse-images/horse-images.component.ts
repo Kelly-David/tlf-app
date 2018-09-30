@@ -1,12 +1,19 @@
-import { Component, OnChanges, Input } from '@angular/core';
+import { Component, OnChanges, OnInit, Input } from '@angular/core';
+import { Gallery, GalleryItem, ImageItem, ThumbnailsPosition, ImageSize } from '@ngx-gallery/core';
+import { Lightbox } from '@ngx-gallery/lightbox';
 import { HorseService } from '../horse.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-horse-images',
   templateUrl: './horse-images.component.html',
-  styleUrls: ['./horse-images.component.css']
+  styleUrls: [
+    './horse-images.component.css',
+    '../../../../node_modules/@ngx-gallery/core/styles/css/gallery.css',
+    '../../../../node_modules/@ngx-gallery/core/styles/css/lightbox.css'
+  ]
 })
 export class HorseImagesComponent implements OnChanges {
 
@@ -16,7 +23,7 @@ export class HorseImagesComponent implements OnChanges {
 
   constructor(
     private hs: HorseService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
   ) { }
 
   ngOnChanges() {

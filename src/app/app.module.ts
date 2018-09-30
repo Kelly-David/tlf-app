@@ -38,10 +38,6 @@ import { MapComponent } from './contact/map/map.component';
 import { NewsImagesComponent } from './news/news-images/news-images.component';
 import { HorseImagesComponent } from './horses/horse-images/horse-images.component';
 import { NgMasonryGridModule } from 'ng-masonry-grid';
-import { GalleryModule } from '@ngx-gallery/core';
-import { LightboxModule } from '@ngx-gallery/lightbox';
-import { GallerizeModule } from '@ngx-gallery/gallerize';
-
 
 @NgModule({
   declarations: [
@@ -84,9 +80,7 @@ import { GallerizeModule } from '@ngx-gallery/gallerize';
       apiKey: environment.mapsAPI
     }),
     NgMasonryGridModule,
-    GalleryModule.forRoot(),
-    LightboxModule.forRoot(),
-    GallerizeModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     HorseService,
