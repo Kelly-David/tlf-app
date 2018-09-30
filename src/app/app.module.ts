@@ -39,6 +39,7 @@ import { NewsImagesComponent } from './news/news-images/news-images.component';
 import { HorseImagesComponent } from './horses/horse-images/horse-images.component';
 import { NgMasonryGridModule } from 'ng-masonry-grid';
 import { HorseProgenyComponent } from './horses/horse-progeny/horse-progeny.component';
+import { HorseProgenyBlockComponent } from './horses/horse-progeny-block/horse-progeny-block.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { HorseProgenyComponent } from './horses/horse-progeny/horse-progeny.comp
     NewsImagesComponent,
     HorseImagesComponent,
     HorseProgenyComponent,
+    HorseProgenyBlockComponent,
   ],
   imports: [
     BrowserModule,

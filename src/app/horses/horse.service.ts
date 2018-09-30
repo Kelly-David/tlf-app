@@ -41,6 +41,10 @@ export class HorseService {
     return this.db.col$(`horses/${id}/results`, ref => ref.orderBy('text', 'desc'));
   }
 
+  public getHorseFoals(id: string): Observable<any[]> {
+    return this.db.col$(`horses/${id}/foals`);
+  }
+
   public filterHorses(filter: string): Observable<any[]> {
     return this.db.col$(`horses`, ref => ref.where(`type`, 'array-contains', filter).orderBy('name'));
   }

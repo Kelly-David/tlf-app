@@ -1,0 +1,6 @@
+<ng-container *ngIf="horse$ | async as horse">
+  <!-- Horse Card -->
+  <div class="progeny-block-dummy"></div>
+  <div class="progeny-block" [style]="getStyle(horse.profileImg)">
+  </div>
+</ng-container>

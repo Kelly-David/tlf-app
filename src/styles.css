@@ -808,3 +808,19 @@ a.article, a.article:hover {
     font-size: 10px;
     text-transform: uppercase
 }
+
+/* --------------------------------------------
+    Progeny Block
+--------------------------------------------- */ 
+
+#progeny .progeny-block-dummy {
+    margin-top: 100%;
+}
+
+#progeny .progeny-block {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
