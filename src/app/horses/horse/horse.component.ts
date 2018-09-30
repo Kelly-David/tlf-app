@@ -35,4 +35,14 @@ export class HorseComponent implements OnChanges {
     const url = 'https://' + imageUrl;
     return this.sanitizer.bypassSecurityTrustUrl(imageUrl);
   }
+
+    /**
+   * Bypass Angular security to bind string to template
+   * @param imageUrl the horse.imageURL string
+   */
+  public getImgStyle(imageUrl) {
+    const style = `background-image: url(${imageUrl}) !important; background-size: cover; background-position: center; height: 90vh`;
+    return this.sanitizer.bypassSecurityTrustStyle(style);
+  }
+
 }

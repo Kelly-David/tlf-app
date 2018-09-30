@@ -9,11 +9,7 @@ import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-horse-images',
   templateUrl: './horse-images.component.html',
-  styleUrls: [
-    './horse-images.component.css',
-    '../../../../node_modules/@ngx-gallery/core/styles/css/gallery.css',
-    '../../../../node_modules/@ngx-gallery/core/styles/css/lightbox.css'
-  ]
+  styleUrls: ['./horse-images.component.css']
 })
 export class HorseImagesComponent implements OnChanges {
 

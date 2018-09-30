@@ -1,4 +1,16 @@
 <ng-container *ngIf="horse$ | async as horse">
+
+<!-- <div class="container-fluid text-center">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <div class="horse-image-header" [style]="getImgStyle(horse.profileImg)" >
+        
+      </div>
+  </div>
+</div>
+</div> -->
+
+
   <div class="container-fluid content-title">
     <div class="text-center">
       <h4 class="content-header-subtitle">{{horse.name}}</h4>
@@ -48,14 +60,6 @@
       </div>
     </div>
   </div>
-
-  <!-- <div class="container-fluid text-center">
-    <div class="row justify-content-center">
-      <div class="col-4">
-        <img [src]="getImg(horse.profileImg)" class="img-fluid" alt="Responsive image">
-      </div>
-    </div>
-  </div> -->
 
   <div class="container-fluid text-center">
     <app-horse-images [horseId]="horse.id"></app-horse-images>
