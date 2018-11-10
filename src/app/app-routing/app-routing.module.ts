@@ -21,14 +21,14 @@ const routes: Routes = [
   { path: 'news', component: NewsComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'horse/:name', component: HorseProfileComponent},
+  { path: 'horse/:name', component: HorseProfileComponent, runGuardsAndResolvers: 'always'},
   { path: '**', redirectTo: 'home'}, // Fallback route
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})
   ],
   exports: [RouterModule]
 })

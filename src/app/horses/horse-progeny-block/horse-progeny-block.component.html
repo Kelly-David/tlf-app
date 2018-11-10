@@ -1,7 +1,7 @@
 <ng-container *ngIf="horse$ | async as horse">
   <!-- Horse Card -->
   <div class="square-block-dummy"></div>
-  <div class="square-block progeny" [style]="getStyle(horse.profileImg)">
+  <div class="square-block progeny" [style]="getStyle(horse.profileImg)" [routerLink]="['/horse', horseNameRoute(horse.name)]">
     <div class="square-block-overlay progeny">
       <div class="square-block-info ">
         <h6>

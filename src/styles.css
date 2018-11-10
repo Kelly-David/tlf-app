@@ -486,12 +486,10 @@ a.article, a.article:hover {
 }
 #horse-list .horse-collection .horse-card .horse-parentage::before{ 
     content: "(";
-    margin-right: 3px;
 }
 
 #horse-list .horse-collection .horse-card .horse-parentage::after{ 
     content: ")";
-    margin-right: 5px;
 }
 
 #horse-list .horse-collection .horse-card .horse-info {
@@ -869,4 +867,19 @@ a.article, a.article:hover {
 
 .progeny:hover h6 {
     opacity: 0;
+}
+
+/* Home Tile */
+
+.home-tile:hover {
+    background-color: #00526486;
+    opacity: 1;
+}
+
+.home-tile h6 {
+    opacity: 0;
+}
+
+.home-tile:hover h6 {
+    opacity: 1;
 }

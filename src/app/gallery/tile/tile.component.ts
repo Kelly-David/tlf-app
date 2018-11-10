@@ -1,14 +1,14 @@
-import { Component, Input, OnChanges } from '@angular/core';
-import { HorseService } from '../horse.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Component, Input, OnChanges } from '@angular/core';
+import { HorseService } from '../../horses/horse.service';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-horse-progeny-block',
-  templateUrl: './horse-progeny-block.component.html',
-  styleUrls: ['./horse-progeny-block.component.css']
+  selector: 'app-tile',
+  templateUrl: './tile.component.html',
+  styleUrls: ['./tile.component.css']
 })
-export class HorseProgenyBlockComponent implements OnChanges {
+export class TileComponent implements OnChanges {
 
   @Input() id: string;
   public horse$: Observable<any>;
@@ -31,7 +31,7 @@ export class HorseProgenyBlockComponent implements OnChanges {
     return this.sanitizer.bypassSecurityTrustStyle(style);
   }
 
-    /**
+  /**
  * Transforms a horse display name to router link format
  * @param name horse name to transform
  */

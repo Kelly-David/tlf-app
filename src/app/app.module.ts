@@ -40,6 +40,8 @@ import { HorseImagesComponent } from './horses/horse-images/horse-images.compone
 import { NgMasonryGridModule } from 'ng-masonry-grid';
 import { HorseProgenyComponent } from './horses/horse-progeny/horse-progeny.component';
 import { HorseProgenyBlockComponent } from './horses/horse-progeny-block/horse-progeny-block.component';
+import { HomeTilesComponent } from './gallery/home-tiles/home-tiles.component';
+import { TileComponent } from './gallery/tile/tile.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,8 @@ import { HorseProgenyBlockComponent } from './horses/horse-progeny-block/horse-p
     HorseImagesComponent,
     HorseProgenyComponent,
     HorseProgenyBlockComponent,
+    HomeTilesComponent,
+    TileComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 <div class="container-fluid content-title">
   <div class="text-center">
     <div class="content-header-subtitle">
-      Home
+      Welcome to our website
     </div>
   </div>
 </div>
@@ -92,15 +92,14 @@
   </div>
 </div>
 
-<div class="row">
-
-  <!-- Observable -->
-  <div class="col-lg-3 col-sm-6 col-xs-6 masonary-block-container" *ngFor="let horse of featuredHorses | async">
+<!-- <div class="row">
+  <div class="col-lg-2 col-sm-6 col-xs-6 masonary-block-container" *ngFor="let horse of featuredHorses | async">
     <app-block [id]=horse.id>
-      <!-- Horse Card -->
     </app-block>
   </div>
-</div>
+</div> -->
+
+<app-home-tiles></app-home-tiles>
 
 <div class="row" id="bg-image-row">
   <div class="text-center">

@@ -1,0 +1,13 @@
+<ng-container *ngIf="horse$ | async as horse">
+    <!-- Horse Card -->
+    <div class="square-block-dummy text-center"></div>
+    <div class="square-block home-tile" [style]="getStyle(horse.profileImg)" [routerLink]="['/horse', horseNameRoute(horse.name)]">
+      <div class="square-block-overlay home-tile">
+        <div class="square-block-info text-center">
+          <h6>
+              {{horse.name}}
+          </h6>
+        </div>
+      </div>
+    </div>
+  </ng-container>
